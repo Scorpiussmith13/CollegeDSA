@@ -1,0 +1,17 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int Series(int ind, int n , int sum){
+    if(ind == n) return sum;
+    if(ind % 2 == 0 ) sum +=4;
+    else sum +=7;
+    Series(ind+1, n , sum);
+}
+int main() {
+    int n = 5;
+    cout << Series (0, n , 0);
+    
+  
+
+    return 0;
+}
