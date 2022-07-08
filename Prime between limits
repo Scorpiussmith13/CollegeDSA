@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool PrimeOr(int n){
+    for(int i=2; i*i<=n ;i++){
+        if(n%i == 0) return false;
+    }
+
+    return true;
+}  
+
+vector<int> prime(int upper , int lower){
+    vector<int> v;
+    for (int i=lower ;i<=upper; i++){
+        if(PrimeOr(i)) v.push_back(i);
+    }
+return v;    
+}
+int main(){
+    int upper=10, lower = 2;
+    
+    
+vector<int> v = prime(upper , lower);
+for(auto itr:v) cout << itr <<" ";
+    
+    return 0;
+}
